@@ -1,6 +1,7 @@
 import csv
 import json
 from datetime import datetime
+from calculations import get_dew_point
 import sqlite3
 
 temp_stats = {'abs_max': None, 'abs_min': None, 'abs_avg': None}
@@ -35,25 +36,6 @@ CSV_MINUTE = 4
 CSV_TEMP = 5
 CSV_RH = 6
 CSV_PRESS = 7
-
-
-def dp(t, h):
-    """
-    calculates the dewpoint via the formula from weatherwise.org
-
-    :type t: float
-    :param t: temperature
-    :param h: humidity
-    :return: dew point
-    """
-    x = 1 - 0.01 * h;
-
-    dew_point = (14.55 + 0.114 * t) * x
-    dew_point += ((2.5 + 0.007 * t) * x) ** 3
-    dew_point += (15.9 + 0.117 * t) * x ** 14
-    dew_point = t - dew_point
-
-    return dew_point
 
 if options['out_html']:
     print '<table>'
@@ -92,7 +74,7 @@ with open('history_export_2016-12-05T11-55-25.csv', 'r') as csvfile:
             db.execute(query)
             db.commit()
 
-        dew_point = dp(float(data_row[CSV_TEMP]), float(data_row[CSV_RH]))
+        dew_point = get_dew_point(float(data_row[CSV_TEMP]), float(data_row[CSV_RH]))
 
         if options['out_raw']:
             print "curr: {}, max: {}, min: {}, avg: {}, rh: {}, dp: {}".format(data_row[CSV_TEMP], temp_stats['abs_max'],
