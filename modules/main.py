@@ -1,7 +1,7 @@
 import csv
 import json
 from datetime import datetime
-import sqlite3
+import database
 
 temp_stats = {'abs_max': None, 'abs_min': None, 'abs_avg': None}
 
@@ -13,19 +13,12 @@ options = {
     'in_csv': True,
 }
 
-if options['db']:
-    db = sqlite3.connect('temp.db')
-    db.execute('''
-    DROP TABLE IF EXISTS `measures`;
-    ''')
-    db.execute('''CREATE TABLE IF NOT EXISTS measures (
-        meas_time INT PRIMARY KEY,
-        temp NUMERIC,
-        humidity NUMERIC,
-        pressure NUMERIC
-    );''')
 
-    db_insert_query = "INSERT INTO measures (meas_time, temp, humidity, pressure) VALUES ('{}','{}','{}','{}');"
+if options['db']:
+    db = database.init('temp.db')
+else:
+    db = None
+
 
 CSV_YEAR = 0
 CSV_MONTH = 1
@@ -88,9 +81,14 @@ with open('history_export_2016-12-05T11-55-25.csv', 'r') as csvfile:
                                 int(data_row[CSV_DAY]), int(data_row[CSV_HOUR]), int(data_row[CSV_MINUTE]))
 
         if options['db']:
-            query = db_insert_query.format(measured_day, data_row[CSV_TEMP], data_row[CSV_RH], data_row[CSV_PRESS])
-            db.execute(query)
-            db.commit()
+            # keywords - opisane w pliku database.py
+            database.add_record(
+                db=db,
+                day=measured_day,
+                temperature=data_row[CSV_TEMP],
+                humidity=data_row[CSV_RH],
+                pressure=data_row[CSV_PRESS],
+            )
 
         dew_point = dp(float(data_row[CSV_TEMP]), float(data_row[CSV_RH]))
 
@@ -111,4 +109,5 @@ with open('history_export_2016-12-05T11-55-25.csv', 'r') as csvfile:
 if options['out_html']:
     print '</table>'
 if options['db']:
-    db.close()
+    database.close(db)
+
