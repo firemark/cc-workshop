@@ -3,8 +3,8 @@ Tutaj cos wpisywalismy, ale nie wiem co
 Bez nóg, bez rąk, bez głowy i brzucha, a gdy się obróci, wszędzie dmucha. 
 Zła pani – mieszka w bani. 
 #grupa B
-Stoi panna w murze – w czerwonym kapturze. 
-Czterech braciszków się gonią, a nigdy się nie dogonią. 
+Stoi panna w murze – w czerwonym kapturze. cegla
+Czterech braciszków się gonią, a nigdy się nie dogonią. pory roku, kwartaly
 #grupa C
 Między żerdziami nad kołkiem kołek, kto szedł, to wyszedł aż na wierzchołek.
 Wszystkie dziury w dachu poszyli, tylko jedną zostawili.
@@ -44,4 +44,5 @@ Lata ptaszek popod lasek, Zakrzywiony ma dziubasek.
 #grupa O
 Czerwony ptaszek, kopie ogonkiem piasek.
 Długie, cienkie nogi, długi ostry dziób, Uciekajcie żaby, bo to jest wasz wróg.
+
 
