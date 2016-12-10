@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+ok
+nowe
+`os dodalem(test):
+=======
+<<<<<<< HEAD
+FP to fajna firma
+=======
+CC costamcostam
+>>>>>>> 7ee4f5bd40e9f4314eb72120cb54fc847d2a807e
+>>>>>>> 12c50abfe2ced81b1404090cd95790263894b0ed
 #grupa A
 Bez nóg, bez rąk, bez głowy i brzucha, a gdy się obróci, wszędzie dmucha. 
 Zła pani – mieszka w bani. 
@@ -20,8 +31,8 @@ Pole niewymierzone, bydełko niezliczone, Parobek rogaty a gospodarz bogaty.
 Żyje bez ciała,mówi bez języka,nikt go nie widzi,a każdy go słyszy.
 Z jakiego drzewa liść nigdy nie opada?
 #grupa H
-Jak ze słomy zrobić masło?
-Co nad nami do góry nogami?
+Jak ze słomy zrobić masło? trza ubijac tak dlugo az bedzie gladkie
+Co nad nami do góry nogami? odbicie w jeziorze :>
 #grupa I
 Przy drodze stoi,ręce rozkłada i nic nie gada.
 Kto się żywi wodą i wiatrem?
