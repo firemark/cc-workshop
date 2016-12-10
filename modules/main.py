@@ -3,11 +3,15 @@ import json
 from datetime import datetime
 import database
 import output
+import reader
 from utils import modify_stats, get_day
 from enum_csv import CSV_TEMP, CSV_RH, CSV_PRESS
 
 temp_stats = {'abs_max': None, 'abs_min': None, 'abs_avg': None}
 
+# zamiast options - takie rzeczy powinny byc zastapione przez uzycie argumentow w konsoli
+# dobrym pomyslem jest uzycie modulu argparse (ktory zostal napisany przez naszego rodaka :)) 
+# https://docs.python.org/2.7/library/argparse.html
 options = {
     'db': True,
     'out_html': False,
@@ -25,13 +29,17 @@ if options['out_html']:
     output.render_start_html()
 
 # that might be a weather station device, not a file
+# tutaj probowaliscie zamienic open na cos innego - dobry pomysl
+# niestety ze wzgledu ze nie chcielismy wprowadzac zaawansowanego
+# pythona, nie wprowadzalismy dzialanie 'with' bo to wymaga wytlumaczenia
+# oraz obiektowosci, wiec nie bylismy w stanie zastapic open
+# Jezeli ktos jest zainteresowany: https://docs.python.org/2.7/library/contextlib.html
+# Tutaj tez zamiast stalej nazwy fajnie by bylo uzyc argparse (komentarz powyzej)
 with open('history_export_2016-12-05T11-55-25.csv', 'r') as csvfile:
     if options['in_csv']:
-        weather_station = csv.reader(csvfile, delimiter=';', quotechar='"')
-        # skip header
-        next(weather_station, None)
+        weather_station =  reader.get_from_csv(csvfile)
     elif options['in_json']:
-        weather_station = json.loads(csvfile.read())['data']
+        weather_station = reader.get_from_json(csvfile)
 
     # process data
     for data_row in weather_station:
