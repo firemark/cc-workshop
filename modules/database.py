@@ -38,6 +38,7 @@ def init(filename):
 def add_record(db, day, temperature, humidity, pressure):
     # funkcje w pythonie posiadaja tak zwane keywords
     # mozemy sie odwolac do nazwanego argumentu funkcji
+    # wiecej: https://docs.python.org/2/tutorial/controlflow.html#keyword-arguments
     query = db_insert_query.format(
         day=day,
         temperature=temperature,

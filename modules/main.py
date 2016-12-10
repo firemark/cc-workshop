@@ -1,3 +1,6 @@
+# oto propowana przezemnie wersja kodu - nie wiem czy jest idealna
+# przyznam szczerze, ze pomysly refactoringu kodu ukradlem od was,
+# wiec po czesci to tez wasz kod :)
 import csv
 import json
 from datetime import datetime
@@ -28,7 +31,6 @@ else:
 if options['out_html']:
     output.render_start_html()
 
-# that might be a weather station device, not a file
 # tutaj probowaliscie zamienic open na cos innego - dobry pomysl
 # niestety ze wzgledu ze nie chcielismy wprowadzac zaawansowanego
 # pythona, nie wprowadzalismy dzialanie 'with' bo to wymaga wytlumaczenia
