@@ -19,7 +19,9 @@ W lesie ścięto, w domu zgięto, W stajni stało, ogon dało, Na ręce wzięto 
 Pole niewymierzone, bydełko niezliczone, Parobek rogaty a gospodarz bogaty.
 #grupa G
 Żyje bez ciała,mówi bez języka,nikt go nie widzi,a każdy go słyszy.
+echo
 Z jakiego drzewa liść nigdy nie opada?
+drzewa binarnego
 #grupa H
 Jak ze słomy zrobić masło?
 Co nad nami do góry nogami?
