@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 FP to fajna firma
+=======
+CC costamcostam
+>>>>>>> 7ee4f5bd40e9f4314eb72120cb54fc847d2a807e
 #grupa A
 Bez nóg, bez rąk, bez głowy i brzucha, a gdy się obróci, wszędzie dmucha. 
 Zła pani – mieszka w bani. 
