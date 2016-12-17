@@ -1,4 +1,4 @@
-from modules.fib import fib
+from fib import fib
 
 def test_fib_zero():
     assert fib(0) == 0 
