@@ -19,7 +19,7 @@ class Trojkat(Figura):
         self.h = h
 
     def pole(self):
-        return 0.5 * a * h
+        return 0.5 * self.a * self.h
 
 
 class Prostokat(Czworokat):
@@ -32,7 +32,7 @@ class Prostokat(Czworokat):
         return self.a * self.b
 
     def obwod(self):
-        return 2 * a + 2 * b
+        return 2 * self.a + 2 * self.b
 
 
 class Trapez(Czworokat):
