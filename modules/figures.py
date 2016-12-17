@@ -14,7 +14,7 @@ class Czworokat(Figura):
 class Trojkat(Figura):
     katy = 3
 
-    def __init__(a, h):
+    def __init__(self, a, h):
         self.a = a
         self.h = h
 
