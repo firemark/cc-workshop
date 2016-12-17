@@ -6,14 +6,17 @@ class Figura(object):
 
 class Czworokat(Figura):
 	def __init__(self):
+		super(Figura, self).__init__()
 		self.angles = 4
 
 class Trojkat(Figura):
 	def __init__(self):
+		super(Figura, self).__init__()
 		self.angles = 3
 
 class Prostokat(Czworokat):
 	def __init__(self, a, b):
+		super(Czworokat, self).__init__()
 		self.a = a
 		self.b = b
 	def pole(self):
@@ -31,6 +34,7 @@ class Kwadrat(Prostokat):
 
 class Trapez(Czworokat):
 	def __init__(self, a, b, c, h):
+		super(Czworokat, self).__init__()
 		self.a = a
 		self.b = b
 		self.c = c
