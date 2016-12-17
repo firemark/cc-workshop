@@ -17,24 +17,25 @@ class Prostokat(Czworokat):
 		self.a = a
 		self.b = b
 	def pole(self):
-		return a*b
+		return self.a*self.b
 	def obwod(self):
-		return 2*a+2*b
+		return 2*self.a+2*self.b
 
-class Kwadrad(Prostokat):
+class Kwadrat(Prostokat):
 	def __init__(self, a):
 		self.a = a
 	def pole(self):
-		return a*a
+		return self.a*self.a
 	def obwod(self):
-		return 4*a
+		return 4*self.a
 
 class Trapez(Czworokat):
 	def __init__(self, a, b, c, h):
 		self.a = a
 		self.b = b
+		self.c = c
 		self.h = h
 	def pole(self):
-		return (a+b)/2*h
+		return (self.a+self.b)/2*self.h
 	def obwod(self):
-		return a+b+2*c
+		return self.a+self.b+2*self.c
