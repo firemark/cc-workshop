@@ -21,9 +21,6 @@ class Trojkat(Figura):
     def pole(self):
         return 0.5 * a * h
 
-    def obwod(self):
-        return NotImplementedError("obwod")
-
 
 class Prostokat(Czworokat):
 
@@ -47,9 +44,6 @@ class Trapez(Czworokat):
 
     def pole(self):
         return 0.5 * (self.a + self.b) * self.h
-
-    def obwod(self):
-        return NotImplementedError("obwod")
 
 
 class Kwadrat(Prostokat)
