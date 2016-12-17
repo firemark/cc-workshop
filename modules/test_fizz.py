@@ -1,4 +1,4 @@
-from modules.fizzbuzz import fizzbuzz 
+from modules.fizzbuzz import fizzbuzz, fizzbuzz_single
 def test_one():
     assert fizzbuzz(1,'ziemniak','kartofel')=='1\n'
 
@@ -13,3 +13,6 @@ def test_two():
 
 def test_fizzbuzz():
     assert fizzbuzz(15,'fizz','buzz')=='1\n2\nfizz\n4\nbuzz\nfizz\n7\n8\nfizz\nbuzz\n11\nfizz\n13\n14\nfizzbuzz\n'
+
+def test_fizz_single_150():
+    assert fizzbuzz_single(150,'x','y')=='xy'
