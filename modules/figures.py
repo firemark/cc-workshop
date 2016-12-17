@@ -46,7 +46,7 @@ class Trapez(Czworokat):
         return 0.5 * (self.a + self.b) * self.h
 
 
-class Kwadrat(Prostokat)
+class Kwadrat(Prostokat):
 
     def __init__(self, a):
         super(Kwadrat, self).__init__(a, a)
