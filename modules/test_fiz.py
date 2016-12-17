@@ -1,4 +1,4 @@
-from fiz import fizzbuzz
+from fiz import fizzbuzz, fizzbuzz_single
 
 def test_fizz_1():
     assert fizzbuzz(1,)=="1"
@@ -17,3 +17,8 @@ def test_fizz_5_addition():
 
 def test_fizz_5():
     assert fizzbuzz(5,"Tom","Bob")=="1\n2\nTom\n4\nBob"
+
+def test_fizz_single_150():
+    assert fizzbuzz_single(150, 'Fizz', 'Buzz') == 'FizzBuzz'
+
+
