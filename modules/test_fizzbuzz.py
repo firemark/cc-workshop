@@ -25,6 +25,9 @@ def test_print_fizzbuzz_one():
 def test_print_fizzbuzz_two():
     assert print_fizzbuzz(2) == '1\n2\n'
 
+def test_print_fizzbuzz_three_hey_there_plus():
+    assert print_fizzbuzz(3, 'Hey', 'There', '+') == '1+2+Hey+'
+
 def test_print_fizzbuzz_five():
     assert print_fizzbuzz(5) == '1\n2\nFizz\n4\nBuzz\n'
 

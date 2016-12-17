@@ -8,8 +8,8 @@ def fizzbuzz(number, fizz='Fizz', buzz='Buzz'):
     else:
         return str(number)
 
-def print_fizzbuzz(count, fizz='Fizz', buzz='Buzz'):
+def print_fizzbuzz(count, fizz='Fizz', buzz='Buzz', ch='\n'):
     return_string = ''
     for i in range(1, count + 1):
-        return_string += fizzbuzz(i, fizz, buzz) + '\n'
+        return_string += fizzbuzz(i, fizz, buzz) + ch
     return return_string
