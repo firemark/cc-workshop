@@ -17,16 +17,15 @@ class Czworokat(Figura):
         return self.a+self.b+self.c+self.d
 
 class Trojkat(Figura):
-    def __init__(self,katy,a,b,c,h):
-        self.katy=3
+    def __init__(self,a,b,c,h):
         self.a = a
         self.b = b
         self.c = c
         self.h = h
-    def pole(self,a,h):
-        return 0.5*a*h
-    def obwod(self,a,b,c):
-        return a+b+c
+    def pole(self):
+        return 0.5*self.a*self.h
+    def obwod(self):
+        return self.a+self.b+self.c
 
 class Trapez(Czworokat):
     def __init__(self,katy,a,b,c,d,h):
@@ -69,3 +68,6 @@ print k.pole(), k.obwod()
 
 t=Trapez(4,1,2,5,8,4)
 print t.pole(), t.obwod()
+
+z=Trojkat(2,2,2,6)
+print z.pole(), z.obwod()
