@@ -1,10 +1,10 @@
 class Figura(object):
 
     def pole(self):
-        return NotImplementedError("pole")
+        raise NotImplementedError("pole")
 
     def obwod(self):
-        return NotImplementedError("obwod")
+        raise NotImplementedError("obwod")
 
 
 class Czworokat(Figura):
@@ -26,7 +26,7 @@ class Prostokat(Czworokat):
 
     def __init__(self, a, b):
         self.a = a
-        self.a = b
+        self.b = b
 
     def pole(self):
         return self.a * self.b
